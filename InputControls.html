@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Input Controls</title>
+</head>
+<body>
+	<h1>Input Controls</h1>
+	<p>
+		To build a form in HTML you can use a variety of input elements. Each input element offers options that allow you to control features such as validation or watermarks.<br />
+	</p>
+
+	<h2>&lt;form&gt; element</h2>
+	<p>
+		The <strong>form</strong> element is used to create an HTML form for user input.<br />
+		It can contain one or more of the following elements: &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt;, &lt;button&gt;, &lt;option&gt;, &lt;optgroup&gt;, &lt;fieldset&gt;, &lt;label&gt;.
+	</p>
+	<hr />
+	
+
+	<h2>&lt;input&gt; element</h2>
+The <strong>input</strong> element is the most basic form element in HTML. It can be used to capture a wide variety of input including text and numeric values. This element has a type attribute that allows you to provide additional metadata about a specific input field. For example, you can designate a field to capture e-mail or URLs. The behavior of the web page may change depending on the browser or client device. For example, a mobile device may display a specific keyboard for URL input.
+
+<h3>Example</h3>
+Here is a basic form that captures a name and e-mail address:
+
+<p>
+&lt;form ...&gt;<br />
+  &nbsp;Username: &lt;input type="text" name="username" /&gt;<br />
+  &nbsp;E-mail Address: &lt;input type="email" name="emailaddress" /&gt;<br />
+&lt;/form&gt;<br />
+</p>
+
+<form ...>
+  Username: <input type="text" name="username" />
+  E-mail Address: <input type="email" name="emailaddress" />
+</form>
+
+<h3>Input Types</h3>
+There are a wide variety of types that can be used with the input element. 
+<p>
+This table shows the types and their respective functionality:
+</p>
+<table>
+	<tr>
+		<th>Type</th>
+		<th>Functionality</th>
+	</tr>
+	<tr>
+		<td>button</td>
+		<td>This renders a button that is typically used with JavaScript frameworks (such as Angular or Knockout)</td>
+	</tr>
+	<tr>
+		<td>checkbox</td>
+		<td>This renders a checkbox that can be independently clicked. The checkbox has a value of on or off</td>
+	</tr>
+	<tr>
+		<td>file</td>
+		<td>This renders a field for file selection and a Browse button to select the file on the client device</td>
+	</tr>
+	<tr>
+		<td>hidden</td>
+		<td>This does not render anything but it will store a value. This can be used to store values that need to be sent to the server when the form is saved</td>
+	</tr>
+	<tr>
+		<td>image</td>
+		<td>This renders an image that functions as a submit button (click on image to save form)</td>
+	</tr>
+	<tr>
+		<td>password</td>
+		<td>This renders a text input where the characters are masked for privacy.</td>
+	</tr>
+	<tr>
+		<td>radio</td>
+		<td>This renders a radio button that can be selected as part of a group of radio buttons.</td>
+	</tr>
+	<tr>
+		<td>text</td>
+		<td>This renders a basic text input field.</td>
+	</tr>
+	<tr>
+		<td>submit</td>
+		<td>This renders a button that submits the HTML form.</td>
+	</tr>
+</table>
+<hr />
+
+
+	<h2>&lt;textarea&gt; element</h2>
+	<p>
+		The <strong>textarea</strong> element renders a multi-line text input control. This control allows the user to enter large quantities of text that may wrap and span across multiple lines.<br />
+	</p>
+
+	<h3>Example</h3>
+	<p>
+		In this example, we pre-populated the textarea element with text from the intro to Microsoft courses on edX.<br />
+	</p>
+
+	<p>
+		&lt;textarea rows="3" cols="30"&gt;<br />
+		&nbsp;We live in a mobile-first and cloud-first world. Computing is ubiquitous, and experiences span devices and exhibit ambient intelligence.<br />
+		&lt;/textarea&gt;
+	</p>
+
+	<textarea rows="3" cols="30">We live in a mobile-first and cloud-first world. Computing is ubiquitous, and experiences span devices and exhibit ambient intelligence.
+	</textarea>
+	<hr />
+
+	<h2>&lt;select&gt; element</h2>
+	<p>
+		The <strong>select</strong> element renders a drop-down list with multiple options. A user can select one of the options. This element contains child option elements that allow you to designate (for each option) a value to be shown to the user and a value to be saved when the form is saved.
+	</p>
+
+	<h3>Example</h3>
+	<p>
+		In this example, we have listed some of the courses available on edX from Microsoft. The value attribute for each option element annotates the data that will be saved to the server when this form is saved. The content of the option element is displayed to the user.
+	</p>
+	<p>
+		&lt;select&gt;<br />
+		    &nbsp;&lt;option value="DAT202x">Processing Big Data with Azure HDInsight&lt;/option&gt;<br />
+		    &nbsp;&lt;option value="DAT204x">Introduction to R Programming&lt;/option&gt;<br />
+		    &nbsp;&lt;option value="CLD203x">Office 365: Managing Identities and Services&lt;/option&gt;<br />
+		    &nbsp;&lt;option value="DEV208x">Introduction to jQuery&lt;/option&gt;<br />
+		&lt;/select&gt;<br />
+	</p>
+
+<select>
+    <option value="DAT202x">Processing Big Data with Azure HDInsight</option>
+    <option value="DAT204x">Introduction to R Programming</option>
+    <option value="CLD203x">Office 365: Managing Identities and Services</option>
+    <option value="DEV208x">Introduction to jQuery</option>
+</select>
+
+	<p>
+		Alternatively you can use the optgroup element to group related options:
+	</p>
+
+	<p>
+	&lt;select&gt;<br />
+	    &nbsp;&lt;optgroup label="Data Platform"&gt;<br />
+	        &nbsp;&nbsp;&lt;option value="DAT202x"&gt;Processing Big Data with Azure HDInsight&lt;/option&gt;<br />
+	        &nbsp;&nbsp;&lt;option value="DAT204x"&gt;Introduction to R Programming&lt;/option&gt;<br />
+	    &nbsp;&lt;/optgroup&gt;<br />
+	    &nbsp;&lt;optgroup label="Cloud"&gt;<br />
+	        &nbsp;&nbsp;&lt;option value="CLD203x"&gt;Office 365: Managing Identities and Services&lt;/option&gt;<br />
+	    &nbsp;&lt;/optgroup&gt;<br />
+	    &nbsp;&lt;optgroup label="Development"&gt;<br />
+	        &nbsp;&nbsp;&lt;option value="DEV208x"&gt;Introduction to jQuery&lt;/option&gt;<br />
+	    &nbsp;&lt;/optgroup&gt;<br />
+	&lt;/select&gt;<br />
+	</p>
+
+<select>
+    <optgroup label="Data Platform">
+        <option value="DAT202x">Processing Big Data with Azure HDInsight</option>
+        <option value="DAT204x">Introduction to R Programming</option>
+    </optgroup>
+    <optgroup label="Cloud">
+        <option value="CLD203x">Office 365: Managing Identities and Services</option>
+    </optgroup>
+    <optgroup label="Development">
+        <option value="DEV208x">Introduction to jQuery</option>
+    </optgroup>
+</select>
+
+<hr />
+
+
+
+<h2>&lt;button&gt; element</h2>
+This special <strog>button</strong> element functions similarly to an input element of type button but it also allows you to render custom content within the button.
+
+Example
+In this example, we render the Microsoft logo within a button.
+
+<p>
+	&lt;button type="button"&gt;<br />
+	    &nbsp;&lt;img src="images/microsoft.png" alt="Microsoft" /&gt;<br />
+	    &nbsp;&lt;br /&gt;<br />
+	    &nbsp;Apply to Microsoft!<br />
+	&lt;/button&gt;
+</p>
+
+<button type="button">
+    <img src="images/microsoft.png" alt="Microsoft" />
+    <br />
+    Apply to Microsoft!
+</button>
+<hr />
+
+<h2>&lt;option&gt; element</h2>
+<p>
+	The option element defines an option in a (drop-down) select list. <br />
+	The option elements go inside a &lt;select&gt; element.
+</p>
+	<select>
+    	<option value="DAT202x">Processing Big Data with Azure HDInsight</option>
+    	<option value="DAT204x">Introduction to R Programming</option>
+    	<option value="CLD203x">Office 365: Managing Identities and Services</option>
+    	<option value="DEV208x">Introduction to jQuery</option>
+	</select>
+	
+
+<hr />
+
+<h2>&lt;optgroup&gt; element</h2>
+<p>
+	The optgroup is used to group related options in a drop-down list. <br />
+	If you have a long list of options, groups of related options are easier to handle for a user.
+</p>
+
+	<select>
+    <optgroup label="Data Platform">
+        <option value="DAT202x">Processing Big Data with Azure HDInsight</option>
+        <option value="DAT204x">Introduction to R Programming</option>
+    </optgroup>
+    <optgroup label="Cloud">
+        <option value="CLD203x">Office 365: Managing Identities and Services</option>
+    </optgroup>
+    <optgroup label="Development">
+        <option value="DEV208x">Introduction to jQuery</option>
+    </optgroup>
+	</select>
+
+<hr />
+
+<h2>&lt;fieldset&gt; element</h2>
+
+	<fieldset>The &lt;fieldset&gt; tag is used to group related elements in a &lt;form&gt;. It draws a box around the related elements. <br />
+	The &lt;legend&gt; <legend>Caption</legend> tag defines a <strong>Caption</strong> for the &lt;fieldset&gt; element.</fieldset>
+
+<hr />
+
+<h2>&lt;label&gt; element</h2>
+	
+<p>
+	The &lt;label&gt; tag defines a label for a &lt;button&gt;, &lt;input&gt;, &lt;meter&gt;, &lt;output&gt;, &lt;progress&gt;, &lt;select&gt;, or &lt;textarea&gt; element. It does not render as anything special for the user. However, it provides a usability improvement for mouse users, because if the user clicks on the text within the &lt;label&gt; element, it toggles the control. The <em>for</em> attribute of the &lt;label&gt; tag should be equal to the <em>id</em> attribute of the related element to bind them together.
+</p>
+
+<p>
+	&lt;form action="handler.php"&gt;<br />
+	&nbsp;&lt;p&gt;&lt;b&gt;Lorem ipsum dolor sit amet...&lt;/b&gt;&lt;/p&gt;<br />
+   	&nbsp;&nbsp;&lt;input type="checkbox" id="check1"&gt;&lt;label for="check1"&gt;Lorem&lt;/label&gt;&lt;br /&gt;<br />
+	&nbsp;&nbsp;&lt;input type="checkbox" id="check2"&gt;&lt;label for="check2"&gt;Ipsum&lt;/label&gt;&lt;br /&gt;<br />
+   	&nbsp;&nbsp;&lt;input type="checkbox" id="check3"&gt;&lt;label for="check3"&gt;Dolor&lt;/label&gt;&lt;br /&gt;<br />
+   	&nbsp;&nbsp;&lt;input type="checkbox" id="check4"&gt;&lt;label for="check4"&gt;Sit amet&lt;/label&gt;<br />
+	&lt;/form&gt;<br />
+</p>
+
+	<form action="handler.php">
+   		<p><b>Lorem ipsum dolor sit amet...</b></p>
+   		<input type="checkbox" id="check1"><label for="check1">Lorem</label><br />
+   		<input type="checkbox" id="check2"><label for="check2">Ipsum</label><br />
+   		<input type="checkbox" id="check3"><label for="check3">Dolor</label><br />
+   		<input type="checkbox" id="check4"><label for="check4">Sit amet</label>
+  	</form>
+
+  	<form action="handler.php">
+   		<p><b>Lorem ipsum dolor sit amet...</b></p>
+   		<input type="checkbox" id="check1">Lorem<br />
+   		<input type="checkbox" id="check2">Ipsum<br />
+   		<input type="checkbox" id="check3">Dolor<br />
+   		<input type="checkbox" id="check4">Sit amet
+  	</form>
+
+<hr />
+
+</body>
+</html>
