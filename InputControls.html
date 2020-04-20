@@ -10,80 +10,93 @@
 	</p>
 
 	<h2>&lt;form&gt; element</h2>
+	The <strong>form</strong> element is used to create an HTML form for user input.<br />
+	It can contain one or more of the following elements: &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt;, &lt;button&gt;, &lt;option&gt;, &lt;optgroup&gt;, &lt;fieldset&gt;, &lt;label&gt;.
+
+	<h3>Example</h3>
 	<p>
-		The <strong>form</strong> element is used to create an HTML form for user input.<br />
-		It can contain one or more of the following elements: &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt;, &lt;button&gt;, &lt;option&gt;, &lt;optgroup&gt;, &lt;fieldset&gt;, &lt;label&gt;.
+		
 	</p>
+		<form action="/action_page.php" method="get">
+		<fieldset>
+		<legend>Here is a basic form that captures First name and Last name</legend>
+	
+  			<label for="fname">First name:</label>
+  			<input type="text" id="fname" name="fname"><br><br>
+  			<label for="lname">Last name:</label>
+  			<input type="text" id="lname" name="lname"><br><br>
+  			<input type="submit" value="Submit">
+		</fieldset>
+		</form>
 	<hr />
 	
 
 	<h2>&lt;input&gt; element</h2>
-The <strong>input</strong> element is the most basic form element in HTML. It can be used to capture a wide variety of input including text and numeric values. This element has a type attribute that allows you to provide additional metadata about a specific input field. For example, you can designate a field to capture e-mail or URLs. The behavior of the web page may change depending on the browser or client device. For example, a mobile device may display a specific keyboard for URL input.
+	The <strong>input</strong> element is the most basic form element in HTML. It can be used to capture a wide variety of input including text and numeric values. This element has a type attribute that allows you to provide additional metadata about a specific input field. For example, you can designate a field to capture e-mail or URLs. The behavior of the web page may change depending on the browser or client device. For example, a mobile device may display a specific keyboard for URL input.
 
-<h3>Example</h3>
-Here is a basic form that captures a name and e-mail address:
+	<h3>Example</h3>
+	Here is a basic form that captures a name and e-mail address:
 
-<p>
-&lt;form ...&gt;<br />
-  &nbsp;Username: &lt;input type="text" name="username" /&gt;<br />
-  &nbsp;E-mail Address: &lt;input type="email" name="emailaddress" /&gt;<br />
-&lt;/form&gt;<br />
-</p>
+	<p>
+	&lt;form ...&gt;<br />
+	  &nbsp;Username: &lt;input type="text" name="username" /&gt;<br />
+	  &nbsp;E-mail Address: &lt;input type="email" name="emailaddress" /&gt;<br />
+	&lt;/form&gt;<br />
+	</p>
 
-<form ...>
-  Username: <input type="text" name="username" />
-  E-mail Address: <input type="email" name="emailaddress" />
-</form>
+	<form ...>
+	  Username: <input type="text" name="username" />
+	  E-mail Address: <input type="email" name="emailaddress" />
+	</form>
 
-<h3>Input Types</h3>
-There are a wide variety of types that can be used with the input element. 
-<p>
-This table shows the types and their respective functionality:
-</p>
-<table>
-	<tr>
-		<th>Type</th>
-		<th>Functionality</th>
-	</tr>
-	<tr>
-		<td>button</td>
-		<td>This renders a button that is typically used with JavaScript frameworks (such as Angular or Knockout)</td>
-	</tr>
-	<tr>
-		<td>checkbox</td>
-		<td>This renders a checkbox that can be independently clicked. The checkbox has a value of on or off</td>
-	</tr>
-	<tr>
-		<td>file</td>
-		<td>This renders a field for file selection and a Browse button to select the file on the client device</td>
-	</tr>
-	<tr>
-		<td>hidden</td>
-		<td>This does not render anything but it will store a value. This can be used to store values that need to be sent to the server when the form is saved</td>
-	</tr>
-	<tr>
-		<td>image</td>
-		<td>This renders an image that functions as a submit button (click on image to save form)</td>
-	</tr>
-	<tr>
-		<td>password</td>
-		<td>This renders a text input where the characters are masked for privacy.</td>
-	</tr>
-	<tr>
-		<td>radio</td>
-		<td>This renders a radio button that can be selected as part of a group of radio buttons.</td>
-	</tr>
-	<tr>
-		<td>text</td>
-		<td>This renders a basic text input field.</td>
-	</tr>
-	<tr>
-		<td>submit</td>
-		<td>This renders a button that submits the HTML form.</td>
-	</tr>
-</table>
-<hr />
-
+	<h3>Input Types</h3>
+	There are a wide variety of types that can be used with the input element. 
+	<p>
+	This table shows the types and their respective functionality:
+	</p>
+	<table>
+		<tr>
+			<th>Type</th>
+			<th>Functionality</th>
+		</tr>
+		<tr>
+			<td>button</td>
+			<td>This renders a button that is typically used with JavaScript frameworks (such as Angular or Knockout)</td>
+		</tr>
+		<tr>
+			<td>checkbox</td>
+			<td>This renders a checkbox that can be independently clicked. The checkbox has a value of on or off</td>
+		</tr>
+		<tr>
+			<td>file</td>
+			<td>This renders a field for file selection and a Browse button to select the file on the client device</td>
+		</tr>
+		<tr>
+			<td>hidden</td>
+			<td>This does not render anything but it will store a value. This can be used to store values that need to be sent to the server when the form is saved</td>
+		</tr>
+		<tr>
+			<td>image</td>
+			<td>This renders an image that functions as a submit button (click on image to save form)</td>
+		</tr>
+		<tr>
+			<td>password</td>
+			<td>This renders a text input where the characters are masked for privacy.</td>
+		</tr>
+		<tr>
+			<td>radio</td>
+			<td>This renders a radio button that can be selected as part of a group of radio buttons.</td>
+		</tr>
+		<tr>
+			<td>text</td>
+			<td>This renders a basic text input field.</td>
+		</tr>
+		<tr>
+			<td>submit</td>
+			<td>This renders a button that submits the HTML form.</td>
+		</tr>
+	</table>
+	<hr />
 
 	<h2>&lt;textarea&gt; element</h2>
 	<p>
@@ -263,6 +276,5 @@ In this example, we render the Microsoft logo within a button.
   	</form>
 
 <hr />
-
 </body>
 </html>
